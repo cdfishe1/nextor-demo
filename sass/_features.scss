@@ -1,4 +1,35 @@
 .features {
-    background-color: $color-grey-light-2;
     grid-column: center-start / center-end;
+    
+    margin: 9.375rem 0;
+
+    display: grid;
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+    gap: 3.75rem;
+    align-items: start;
+}
+
+.feature {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    gap: 1rem;
+    
+
+    &__icon {
+        fill: $color-primary;
+        width: 2.8125rem;
+        height: 2.8125rem;
+        grid-row: 1 / span 2;
+    }
+
+    &__header {
+        font-family: $font-display;
+        font-weight: 400;
+        font-size: 1.1875rem;
+    }
+
+    &__text {
+        font-size: 1.0625rem;
+    }
 }
